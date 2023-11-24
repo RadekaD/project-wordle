@@ -5,6 +5,7 @@ import { WORDS } from "../../data";
 
 import GuessInput from "./GuessInput";
 import ShowGuessComponent from "./ShowGuessComponent";
+import Guess from "./Guess"
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);

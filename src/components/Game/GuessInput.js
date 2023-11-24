@@ -9,7 +9,7 @@ function GuessInput({ guess, setGuess }) {
       onSubmit={(event) => {
         event.preventDefault();
         const newGuessArr = [...guess];
-        newGuessArr.push({guess: inputValue, id: Math.random()});
+        newGuessArr.push(inputValue);
         setGuess(newGuessArr);
         setInputValue("");
       }}

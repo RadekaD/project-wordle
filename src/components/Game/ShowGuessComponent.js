@@ -1,17 +1,19 @@
 import React from "react";
 
+import Guess from "./Guess";
+
+// utils
+import { range } from "../../utils";
+import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
+
 function ShowGuessComponent({ guess }) {
   console.log("Guess ===>", guess);
 
   return (
     <div className="guess-results">
-      {guess.map((item) => {
-        return (
-          <p key={item.id} className="guess">
-            {item.guess}
-          </p>
-        );
-      })}
+      {range(NUM_OF_GUESSES_ALLOWED).map((num) => (
+        <Guess key={num} guess={guess[num]} />
+      ))}
     </div>
   );
 }
