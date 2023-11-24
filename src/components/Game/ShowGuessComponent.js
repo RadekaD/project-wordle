@@ -6,13 +6,13 @@ import Guess from "./Guess";
 import { range } from "../../utils";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 
-function ShowGuessComponent({ guess }) {
+function ShowGuessComponent({ guess, answer }) {
   console.log("Guess ===>", guess);
 
   return (
     <div className="guess-results">
       {range(NUM_OF_GUESSES_ALLOWED).map((num) => (
-        <Guess key={num} guess={guess[num]} />
+        <Guess key={num} guess={guess[num]} answer={answer} />
       ))}
     </div>
   );

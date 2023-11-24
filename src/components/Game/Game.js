@@ -17,7 +17,7 @@ function Game() {
 
   return (
     <>
-      <ShowGuessComponent guess={guess} />
+      <ShowGuessComponent guess={guess} answer={answer} />
       <GuessInput guess={guess} setGuess={setGuess} />
       Put a game here!
     </>
